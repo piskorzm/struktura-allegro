@@ -1,0 +1,20 @@
+.block {
+  width: 6em;
+  min-height: 1.5em;
+  text-align: center;
+  margin: 1em;
+  padding: 1em;
+  border: .15em solid #ff5a00;
+  border-radius: .5em;
+  background-color: #ffffff;
+}
+
+.block:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
+}
+
+h5 {
+  margin-top: .25em;
+  margin-bottom: .25em;
+}

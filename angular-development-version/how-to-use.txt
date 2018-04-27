@@ -1,0 +1,8 @@
+How to use
+----------
+
+Run "npm install" inside this project folder to install all dependencies. 
+
+
+Make sure you use the latest version of the Angular CLI  (if not run "npm install -g @angular/cli").
+Then run "ng serve -open".

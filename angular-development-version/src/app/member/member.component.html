@@ -1,0 +1,25 @@
+<div (click)="expand()" class="open-button">
+  {{firstName}} {{surname}}
+</div>
+<div *ngIf="expanded" class="overlay">
+  <div class="main-block">
+    <div class="summary">
+      <img class="image" src="{{image}}">
+      <div class="data">
+        <h4>{{firstName}} {{surname}}</h4>
+
+        <p>Stanowisko: {{position}}</p>
+        <p>Z nami od: {{joined}}</p>
+        <p>Email: {{email}}</p>
+      </div>
+    </div>
+
+    <div class="profile">
+      <h4>Kilka słów o mnie:</h4>
+      <p>{{about}}</p>
+    </div>
+
+    <p class="close" (click)="collapse()"> &#10005; </p>
+
+  </div>
+</div>

@@ -1,0 +1,11 @@
+.departments{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.teams {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
