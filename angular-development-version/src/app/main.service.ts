@@ -8,6 +8,7 @@ export class MainService {
   }
 
   getDepartments() {
+    //return this.httpClient.get('../assets/departments.json');
     return this.httpClient.get('https://piskorzm.github.io/struktura-allegro/assets/departments.json');
   }
 }

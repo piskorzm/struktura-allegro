@@ -1,12 +1,17 @@
+:host.expanded .block {
+  height: 16em;
+}
+
 .block {
   width: 6em;
-  min-height: 1.5em;
+  height: 3em;
   text-align: center;
   margin: 1em;
   padding: 1em;
   border: .15em solid #ff5a00;
   border-radius: .5em;
   background-color: #ffffff;
+  transition: height .3s ease-in-out;
 }
 
 .block:hover {
@@ -14,7 +19,18 @@
   background-color: #eeeeee;
 }
 
-h5 {
-  margin-top: .25em;
-  margin-bottom: .25em;
+:host.expanded .member {
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+  transition-delay: .3s;
 }
+
+.member {
+  opacity: 0;
+}
+
+.team-name {
+  margin-top: .2em;
+  margin-bottom: .2em;
+}
+

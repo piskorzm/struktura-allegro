@@ -1,14 +1,11 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <img alt="Logo Allegro" src="assets/logo.jpg">
-  <h1>Witaj! Tu poznasz strukturę naszej firmy.</h1>
-  <div class="departments">
-    <app-department *ngFor="let department of departments" (onSelect)="updateDisplayedDepartment($event)" [name]="department.name" [teams]="department.teams"></app-department>
-  </div>
-  <h3 *ngIf="displayedDepartment!==''">{{displayedDepartment}}</h3>
-  <div class="teams">
-
-    <app-team *ngFor="let team of displayedTeams" [name]="team.name" [members]="team.members"></app-team>
-  </div>
+<img alt="Logo Allegro" src="assets/logo.jpg">
+<h1>Witaj! Tu poznasz strukturę naszej firmy.</h1>
+<div class="departments">
+  <app-department *ngFor="let department of departments" (onSelect)="updateDisplayedDepartment($event)" [name]="department.name" [teams]="department.teams"></app-department>
 </div>
-
+<h3 *ngIf="displayedDepartment!==''">{{displayedDepartment}}</h3>
+<div class="teams">
+  <app-team *ngFor="let team of displayedTeams" [name]="team.name" [members]="team.members"></app-team>
+</div>
+</div>

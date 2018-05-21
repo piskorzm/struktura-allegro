@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, HostBinding} from '@angular/core';
 import {Member} from '../models/member.model';
 
 @Component({
@@ -9,7 +9,7 @@ import {Member} from '../models/member.model';
 export class TeamComponent implements OnInit {
   @Input() name: string;
   @Input() members: Member[];
-  public membersExpanded: boolean;
+  @HostBinding('class.expanded') membersExpanded: boolean = false;
 
   constructor() {
     this.membersExpanded = false;
@@ -18,7 +18,8 @@ export class TeamComponent implements OnInit {
   ngOnInit() {
   }
 
-  setExpandedMembers() {
+  setExpandedMembers(e) {
+    if(e.target.className === "block" || e.target.className ==="team-name")
     this.membersExpanded = !this.membersExpanded;
   }
 

@@ -1,15 +1,17 @@
-<div class="block">
-  <h5 (click)="setExpandedMembers()">{{name}}</h5>
+<div (click)="setExpandedMembers($event)" class="block">
+  <h5 class="team-name">{{name}}</h5>
 
-  <div *ngIf="membersExpanded">
-    <app-member *ngFor="let member of members"
-                [firstName]="member.firstName"
-                [surname]="member.surname"
-                [position]="member.position"
-                [email]="member.email"
-                [joined]="member.joined"
-                [about]="member.about"
-                [image]="member.image"
-    ></app-member>
+  <div class="member">
+    <div *ngIf="membersExpanded">
+      <app-member *ngFor="let member of members"
+                  [firstName]="member.firstName"
+                  [surname]="member.surname"
+                  [position]="member.position"
+                  [email]="member.email"
+                  [joined]="member.joined"
+                  [about]="member.about"
+                  [image]="member.image"
+      ></app-member>
+    </div>
   </div>
 </div>
